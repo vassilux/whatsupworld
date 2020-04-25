@@ -1,0 +1,42 @@
+{
+"app_name":"Wath's Up World ",
+
+"app_title": "What's new \nin the world",
+
+"language": "Language",
+
+"language_en": "English",
+
+"language_fr":"Français",
+
+"settings": "Settings",
+
+"general_settings": "General Settings",
+
+"weather": "Weather",
+
+"temperature": "Temperature",
+
+"news": "News",
+
+"country": "Country",
+
+"currency": "Currency",
+
+"currency_eur_exchange": "EUR exchange at ",
+
+"error_to_load": "Something went wrong!",
+
+"empty_result_reload": "Nothing found, try to reload again",
+
+"sunrise": "Sunrise",
+
+"sunset" : "Sunset",
+
+"wind_speed": "Wind speed",
+
+"humidity": "Humidity",
+
+"webcams": "WebCams"
+
+}

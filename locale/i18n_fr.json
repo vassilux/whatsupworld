@@ -1,0 +1,43 @@
+{
+  "app_name":"Wath's Up World ",
+
+  "app_title": "Quoi de neuf \n dans le monde",
+
+  "language": "Langue",
+
+  "language_en": "English",
+
+  "language_fr":"Français",
+
+  "settings": "Réglages",
+
+  "general_settings": "Réglages Généraux",
+
+  "weather": "Météo",
+
+  "temperature": "Température",
+
+  "news": "Actualités",
+
+  "country": "Pays",
+
+  "currency": "Devises",
+
+  "currency_eur_exchange": "EUR échange le ",
+
+  "error_to_load": "Quelque chose a mal tourné!",
+
+  "empty_result_reload": "Rien trouvé, essayez de recharger à nouveau",
+
+  "sunrise": "Lever du soleil",
+
+  "sunset" : "Coucher du soleil",
+
+  "wind_speed": "Vitesse du vent",
+
+  "humidity": "Humidité",
+
+  "webcams": "WebCams"
+  
+  }
+  

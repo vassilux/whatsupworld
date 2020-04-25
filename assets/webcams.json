@@ -1,0 +1,59 @@
+[
+
+	{
+		"country" : "Canada",
+		"city": "Banff, Resort Town",
+		"url": "https://youtu.be/cXyDs4ZJ59w"
+	},
+
+	{
+		"country" : "England",
+		"city": "Snakes Lane East, London",
+		"url": "https://youtu.be/KnscvLxx_K0" 
+	},
+
+	{
+		"country" : "Italy",
+		"city": "Assisi",
+		"url": "https://youtu.be/SOswzz5m6MQ"
+	},
+
+	{
+		"country" : "Netherlands",
+		"city": "Dam Square, Amsterdam",
+		"url": "https://youtu.be/KGEekP1102g"
+	},	
+
+	{
+		"country" : "Spanish",
+		"city": "Benidorm",
+		"url": "http://83.56.31.69/mjpg/video.mjpg"
+	},
+
+	{
+		"country" : "Vatican",
+		"city": "St. Peter's Square",
+		"url": "https://youtu.be/M-RFWoMT574"
+	},
+
+	
+	{
+		"country" : "USA",
+		"city": "Times Square, Manhattan",
+		"url": "https://youtu.be/4qyZLflp-sI"
+	},
+
+	{
+		"country": "USA",
+		"city": "South Las Vegas",
+		"url": "https://youtu.be/Q7oswgzGIK0"
+	},
+
+	{
+		"country" : "USA",
+		"city": "New York",
+		"url": "https://youtu.be/4qyZLflp-sI" 
+	}
+
+]
+
