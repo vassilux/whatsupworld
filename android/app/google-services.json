@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "188023636149",
+    "firebase_url": "https://whatsupworld-f4af8.firebaseio.com",
+    "project_id": "whatsupworld-f4af8",
+    "storage_bucket": "whatsupworld-f4af8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188023636149:android:254713fb5e651d115c7efc",
+        "android_client_info": {
+          "package_name": "com.vassilux.whatsupworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188023636149-a3gufhvmb6a07g7piped1hoq7cb7hhtg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ67IfnyBmL2axC-PL96aKibLP6hMiflk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188023636149-a3gufhvmb6a07g7piped1hoq7cb7hhtg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -9,6 +9,9 @@ import 'package:whatsupworld/utils/translations.dart';
 import 'package:whatsupworld/utils/uidata.dart';
 import 'package:whatsupworld/logic/bloc/menu/menu_bloc.dart';
 
+import 'package:whatsupworld/version_check.dart';
+
+
 
 
 class HomePage extends StatelessWidget {
@@ -358,6 +361,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) => versionCheck(context));
     _context = context;
     deviceSize = MediaQuery.of(context).size;
     return defaultTargetPlatform == TargetPlatform.iOS
