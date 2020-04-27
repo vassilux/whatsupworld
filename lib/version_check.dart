@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:ota_update/ota_update.dart';
+
 const APP_STORE_URL =
-    'https://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftwareUpdate?id=YOUR-APP-ID&mt=8';
+    'https://freeapk-ca7ea.firebaseapp.com/archive/whatsupworld.apk';
 const PLAY_STORE_URL =
-    'https://play.google.com/store/apps/details?id=YOUR-APP-ID';
+    'https://freeapk-ca7ea.firebaseapp.com/archive/whatsupworld.apk';
 
 versionCheck(context) async {
   //Get Current installed version of app
@@ -84,9 +86,14 @@ _showVersionDialog(context) async {
 }
 
 _launchURL(String url) async {
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
+  try {    
+    OtaUpdate().execute(url, destinationFilename: 'whatsupworld.apk').listen(
+      (OtaEvent event) {
+        print('EVENT: ${event.status} : ${event.value}');
+      },
+    );
+  } catch (e) {
+    print('Failed to make OTA update. Details: $e');
   }
+
 }

@@ -9,11 +9,11 @@ class WebcamYoutubePlayer extends StatefulWidget {
   WebcamYoutubePlayer(this.webcam);
 
   @override
-  _WebcamYoutubePlayerState createState() => _WebcamYoutubePlayerState(this.webcam);
+  _WebcamYoutubePlayerState createState() =>
+      _WebcamYoutubePlayerState(this.webcam);
 }
 
 class _WebcamYoutubePlayerState extends State<WebcamYoutubePlayer> {
- 
   final Webcam webcam;
 
   _WebcamYoutubePlayerState(this.webcam);
@@ -28,6 +28,8 @@ class _WebcamYoutubePlayerState extends State<WebcamYoutubePlayer> {
       initialVideoId: videoId,
       flags: YoutubePlayerFlags(
         isLive: true,
+        hideThumbnail: true,
+        hideControls: true,
       ),
     );
 
@@ -35,23 +37,45 @@ class _WebcamYoutubePlayerState extends State<WebcamYoutubePlayer> {
   }
 
   @override
-  void dispose() { 
+  void dispose() {
     _youtubeController.dispose();
     super.dispose();
   }
 
-  Widget _buildYoutubePlayer(BuildContext context) {    
-    return Container(child: YoutubePlayer(
+  Widget _buildYoutubePlayer(BuildContext context) {
+    return Container(
+        child: YoutubePlayer(
+          
       controller: _youtubeController,
-      liveUIColor: Colors.amber,
-    ));
-
+      liveUIColor: Colors.blueAccent,
+     
+    )
+    
+    );
   }
 
-  
+  /*
+YoutubePlayer(
+    context: context,
+    videoId: "iLnmTe5Q2Qw",
+    flags: YoutubePlayerFlags(
+      autoPlay: true,
+      showVideoProgressIndicator: true,
+    ),
+    videoProgressIndicatorColor: Colors.amber,
+    progressColors: ProgressColors(
+      playedColor: Colors.amber,
+      handleColor: Colors.amberAccent,
+    ),
+    onPlayerInitialized: (controller) {
+      _controller = controller;
+      _controller.addListener(listener);
+    },
+),
+  */
 
   @override
-  Widget build(BuildContext context) {    
+  Widget build(BuildContext context) {
     return _buildYoutubePlayer(context);
   }
 }

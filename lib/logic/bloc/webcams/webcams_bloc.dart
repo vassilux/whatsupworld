@@ -33,9 +33,10 @@ class WebcamsBloc extends Bloc<WebcamsEvent, WebcamsState> {
     yield WebcamsLoading();
     try {
 
-      List<Webcam> webcams = await webcamsProvider.getWebCamst(); 
+      List<Webcam> webcams = await webcamsProvider.getAllWebCams(); 
       yield WebcamsLoaded(webcams : webcams);
-    } catch (e) {    
+    } catch (e) {   
+      print(" Exception ${e.toString()}");
       yield WebcamsError(e.toString());
     }
   }
