@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_screen/responsive_screen.dart';
 import 'package:whatsupworld/model/webcam.dart';
+import 'package:whatsupworld/utils/translations.dart';
 
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:zoom_widget/zoom_widget.dart';
 
 class WebcamYoutubePlayer extends StatefulWidget {
   final Webcam webcam;
@@ -28,8 +31,9 @@ class _WebcamYoutubePlayerState extends State<WebcamYoutubePlayer> {
       initialVideoId: videoId,
       flags: YoutubePlayerFlags(
         isLive: true,
-        hideThumbnail: true,
+        hideThumbnail: false,
         hideControls: true,
+        captionLanguage: allTranslations.currentLanguage,
       ),
     );
 
@@ -43,15 +47,32 @@ class _WebcamYoutubePlayerState extends State<WebcamYoutubePlayer> {
   }
 
   Widget _buildYoutubePlayer(BuildContext context) {
-    return Container(
+    final Function wp = Screen(context).wp;
+    final Function hp = Screen(context).hp;
+
+    return Zoom(
+        width: wp(100),
+        height: hp(80),
+        canvasColor: Colors.grey,
+        backgroundColor: Colors.blueAccent,
+        colorScrollBars: Colors.purple,
+        opacityScrollBars: 0.9,
+        scrollWeight: 10.0,
+        centerOnScale: true,
+        enableScroll: true,
+        doubleTapZoom: true,
+        zoomSensibility: 2.3,
+        initZoom: 2.0,
         child: YoutubePlayer(
-          
-      controller: _youtubeController,
-      liveUIColor: Colors.blueAccent,
-     
-    )
-    
-    );
+          controller: _youtubeController,
+          liveUIColor: Colors.blueAccent,
+          showVideoProgressIndicator: true,
+          width: wp(95),
+           
+           onReady: () {
+             print("youtube player ready");
+           },        
+        ));
   }
 
   /*
